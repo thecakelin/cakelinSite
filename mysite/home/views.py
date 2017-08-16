@@ -13,6 +13,9 @@ from django.views.generic import TemplateView
 # def index(request):
 #      return HttpResponse("Coming Soon!")
 
-class HomePageView(TemplateView):
-    def get(self, request, **kwargs):
-        return render(request, 'index.html', context=None)
+# class HomePageView(TemplateView):
+#     def get(self, request, **kwargs):
+#         return render(request, 'index.html', context=None)
+
+def index(request):
+    return render(request, 'home/index.html', context=None)
