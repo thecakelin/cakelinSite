@@ -2,19 +2,64 @@
 <!DOCTYPE html>
 
 {% extends 'djfrontend/base.html' %}
+{% load djfrontend %}
 
+{% block html %}
+  {% load staticfiles %}
+  <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+{% endblock html %}
+{% block meta %}
+  {% block title %}Cakelin{% endblock title %}
+{% endblock meta %}
 
-{% block title %}Coming soon!{% endblock title %}
+{% block head_css %}
+  {% djfrontend_twbs_css %}
+  {% djfrontend_twbs_theme_css %}
+{% endblock head_css %}
 
 {% block body_content %}
-  <h1>Coming Soon!</h1>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="height: 80px;">
+    <div class="container-fluid">
+      <div class="navbar-header" style="height: 80px;">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="height: 80px;">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> -->
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="{% static 'icon-grey.png' %}" height="60" width="60">
+        </a>
+      </div>
+    </div>
+  </nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Compassion<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Curiosity</a></li>
+          <li><a href="#">Creativity</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- <div class="row">
+    <div class="col-md-3">
+      <img class="img-responsive" src="{% static 'meBlonde.jpg' %}" />
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive" src="{% static 'kaitlin.png' %}" />
+    </div>
+    <div class="col-md-3">
+      <img class="img-responsive" src="{% static 'redheadGlasses.jpg' %}" />
+    </div>
+  </div> -->
+
+  <div class="jumbotron">
+    <img alt="homeImage" class="img-responsive" src="{% static 'Kaitlin.png' %}">
+    <h1 class="display-3">Greetings!</h1>
+    <p class="lead">I'm Kaitlin. I do research and build tools that use data to level the playing field for marginalized people.</p>
+  </div>
+
 {% endblock body_content %}
-<!-- <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Coming soon!</title>
-    </head>
-    <body>
-        <h1>Coming soon!</h1>
-    </body>
-</html> -->
