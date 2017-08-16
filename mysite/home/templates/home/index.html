@@ -14,12 +14,25 @@
 
 {% block head_css %}
   {% djfrontend_twbs_css %}
-  {% djfrontend_twbs_theme_css %}
+  <!-- {% djfrontend_twbs_theme_css %} -->
+
+  <style>
+
+  .my-name {
+    font-size: 5em;
+    font-weight: bold;
+    color: white !important;
+    margin: auto;
+    text-align: center;
+  }
+
+  </style>
+
 {% endblock head_css %}
 
 {% block body_content %}
 
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="height: 80px;">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="height: 100px;">
     <div class="container-fluid">
       <div class="navbar-header" style="height: 80px;">
         <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="height: 80px;">
@@ -28,11 +41,13 @@
           <span class="icon-bar"></span>
         </button> -->
         <a class="navbar-brand" href="#">
-          <img alt="Brand" src="{% static 'icon-grey.png' %}" height="60" width="60">
+          <img alt="Brand" src="{% static 'icon-black.png' %}" height="80" width="80">
         </a>
       </div>
+      <p class="my-name">Kaitlin Marquardt</p>
     </div>
   </nav>
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
@@ -56,8 +71,9 @@
     </div>
   </div> -->
 
-  <div class="jumbotron">
-    <img alt="homeImage" class="img-responsive" src="{% static 'Kaitlin.png' %}">
+  <!-- class="jumbotron" -->
+  <div style="margin:80px 0px">
+    <img alt="homeImage" class="img-responsive" src="{% static 'Kaitlin.png' %}" style="float: left; border:5px solid #222222;">
     <h1 class="display-3">Greetings!</h1>
     <p class="lead">I'm Kaitlin. I do research and build tools that use data to level the playing field for marginalized people.</p>
   </div>
