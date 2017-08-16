@@ -7,10 +7,11 @@
 {% block html %}
   {% load staticfiles %}
   <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Bitter:300,400,600,700&amp;lang=en" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen:300,400,600,700&amp;lang=en" />
 {% endblock html %}
-{% block meta %}
-  {% block title %}Cakelin{% endblock title %}
-{% endblock meta %}
+{% block title %}Cakelin{% endblock title %}
+
 
 {% block head_css %}
   {% djfrontend_twbs_css %}
@@ -20,10 +21,48 @@
 
   .my-name {
     font-size: 5em;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: white !important;
-    margin: auto;
+    background-color: #222222;
+    /*float: left;*/
+    /*display: inline-block;*/
+    position: relative;
+    z-index: -1;
     text-align: center;
+    font-family: "Bitter";
+    border-bottom: 5px solid #f79420;
+    padding: 40px 40px 40px 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .oxygen {
+    font-family: "Oxygen";
+    color: black !important;
+  }
+
+  .center-element {
+    display: block;
+  }
+
+  .logo {
+    position: absolute;
+    padding: 20px 20px 20px 20px;
+    /*display: inline-block;*/
+    /*overflow: auto;*/
+    /*float: left;*/
+  }
+
+  .cartoon {
+    border-left: 5px solid #222222;
+    border-right: 5px solid #222222;
+    border-top-style: none;
+    border-bottom: 5px solid #f79420;
+    /*margin: 0px;*/
+  }
+
+  body {
+    background-color: white;
   }
 
   </style>
@@ -32,21 +71,25 @@
 
 {% block body_content %}
 
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="height: 100px;">
+  <img class="img-responsive logo" src="{% static 'icon-black.png' %}" height="180" width="180">
+  <h1 class="my-name">KAITLIN MARQUARDT</h1>
+
+
+  <!-- <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="height: 100px;">
     <div class="container-fluid">
-      <div class="navbar-header" style="height: 80px;">
+      <div class="navbar-header" style="height: 80px;"> -->
         <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="height: 80px;">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button> -->
-        <a class="navbar-brand" href="#">
+        <!-- <a class="navbar-brand" href="#">
           <img alt="Brand" src="{% static 'icon-black.png' %}" height="80" width="80">
         </a>
       </div>
-      <p class="my-name">Kaitlin Marquardt</p>
+
     </div>
-  </nav>
+  </nav> -->
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -72,10 +115,20 @@
   </div> -->
 
   <!-- class="jumbotron" -->
-  <div style="margin:80px 0px">
-    <img alt="homeImage" class="img-responsive" src="{% static 'Kaitlin.png' %}" style="float: left; border:5px solid #222222;">
-    <h1 class="display-3">Greetings!</h1>
-    <p class="lead">I'm Kaitlin. I do research and build tools that use data to level the playing field for marginalized people.</p>
-  </div>
+  <!-- <div style="margin:80px 0px"> -->
+
+
+    <!-- style=""> -->
+
+    <div class="container-fluid">
+      <div class="col-md-8 col-md-offset-2">
+        <img alt="homeImage" class="img-responsive center-block cartoon" src="{% static 'kaitlin.png' %}" style="width: auto;">
+        <h1 class="display-3 oxygen text-center">Greetings!</h1>
+        <p class="lead oxygen text-left">    I'm Kaitlin otherwise known as Cakelin! I do research and build software to level the playing field for marginalized people. I have a background as a computational biochemist, ETL developer and full stack developer in healthcare tech. What is known must be shared (OCLC) and every opportunity to teach science/tech has shown me how much potential we are currently missing out on. Humanity is going to need every person and every discipline in order to solve the challenges ahead.</p>
+        <p class="lead oxygen text-left">    What would be possible if we could predict which daily decisions to make to align with our goals? If social movements could use activist's strengths to target actions with the best outcome? What if a person's unique background could be used to learn complex subjects while strengthening their existing knowledge? The scientist in me is always coming up with more questions than answers! These questions are the foundation for what I'm currently calling Data To The People. As a believer in transparency, change starting with yourself, and being "expert enough", I'll be starting with my own data. </p>
+        <p class="lead oxygen text-left">    If this sounds interesting to you or you have your own perspective to offer, I'd love to hear it! Feel free to reach out to me via whichever doobly doo you like below.</p>
+
+      </div>
+    </div>
 
 {% endblock body_content %}
