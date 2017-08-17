@@ -16,6 +16,7 @@
 {% block head_css %}
   {% djfrontend_twbs_css %}
   <!-- {% djfrontend_twbs_theme_css %} -->
+  {% djfrontend_fontawesome %}
 
   <style>
 
@@ -31,7 +32,7 @@
     text-align: center;
     font-family: "Bitter";
     border-bottom: 5px solid #f79420;
-    padding: 40px 40px 40px 40px;
+    padding: 60px 40px 20px 40px;
     margin-top: 0px;
     margin-bottom: 0px;
   }
@@ -48,6 +49,10 @@
   .logo {
     position: absolute;
     padding: 20px 20px 20px 20px;
+    width: 20%;
+    height: 170px;
+    /*width: 180px;*/
+    max-width: 170px;
     /*display: inline-block;*/
     /*overflow: auto;*/
     /*float: left;*/
@@ -65,13 +70,60 @@
     background-color: white;
   }
 
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  /* Set a specific color for each brand */
+
+  .fa-envelope {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-github {
+    background: black;
+    color: white;
+  }
+
+  .fa-codepen {
+    background: black;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
   </style>
 
 {% endblock head_css %}
 
 {% block body_content %}
 
-  <img class="img-responsive logo" src="{% static 'icon-black.png' %}" height="180" width="180">
+  <img class="img-responsive logo" src="{% static 'icon-black.png' %}">
   <h1 class="my-name">KAITLIN MARQUARDT</h1>
 
 
@@ -116,18 +168,41 @@
 
   <!-- class="jumbotron" -->
   <!-- <div style="margin:80px 0px"> -->
-
-
     <!-- style=""> -->
 
     <div class="container-fluid">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
         <img alt="homeImage" class="img-responsive center-block cartoon" src="{% static 'kaitlin.png' %}" style="width: auto;">
         <h1 class="display-3 oxygen text-center">Greetings!</h1>
         <p class="lead oxygen text-left">    I'm Kaitlin otherwise known as Cakelin! I do research and build software to level the playing field for marginalized people. I have a background as a computational biochemist, ETL developer and full stack developer in healthcare tech. What is known must be shared (OCLC) and every opportunity to teach science/tech has shown me how much potential we are currently missing out on. Humanity is going to need every person and every discipline in order to solve the challenges ahead.</p>
-        <p class="lead oxygen text-left">    What would be possible if we could predict which daily decisions to make to align with our goals? If social movements could use activist's strengths to target actions with the best outcome? What if a person's unique background could be used to learn complex subjects while strengthening their existing knowledge? The scientist in me is always coming up with more questions than answers! These questions are the foundation for what I'm currently calling Data To The People. As a believer in transparency, change starting with yourself, and being "expert enough", I'll be starting with my own data. </p>
-        <p class="lead oxygen text-left">    If this sounds interesting to you or you have your own perspective to offer, I'd love to hear it! Feel free to reach out to me via whichever doobly doo you like below.</p>
+        <p class="lead oxygen text-left">    What would be possible if we could predict which daily decisions to make to align with our goals? If social movements could use activist's strengths to target actions with the best outcome? What if a person's unique background could be used to learn complex subjects while strengthening their existing knowledge? The scientist in me is always coming up with more questions than answers! These questions are the foundation for what I'm currently calling Data To The People. As a believer in transparency, change starting with yourself, and being "expert enough", I'll be starting with my own data. Using available APIs for apps I use, I'll be sharing what charities I donate to, my failures, my time usage and most importantly a customized learning plan that fits my goals.</p>
+        <p class="lead oxygen text-left">    If this sounds interesting to you or you have your own perspective to share, I'd love to hear it! Feel free to reach out to me via whichever doobly doo you like below.</p>
+      </div>
+      </div>
+    </div>
 
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Add font awesome icons -->
+        <div class="col-md-1 col-md-offset-3">
+          <a href="mailto:kaitlinmarquardt@gmail.com" class="fa fa-envelope"></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://github.com/kaitlinmarquardt" class="fa fa-github"></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://codepen.io/kaitlinmarquardt/" class="fa fa-codepen"></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://www.linkedin.com/in/kaitlinmarquardt/" class="fa fa-linkedin"></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://twitter.com/thecakelin" class="fa fa-twitter"></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://www.facebook.com/kaitlin.marquardt" class="fa fa-facebook"></a>
+        </div>
       </div>
     </div>
 
